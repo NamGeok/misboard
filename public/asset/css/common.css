@@ -1,1 +1,13 @@
 @charset "utf-8";
+
+.ms-bar {display:inline-block;width:1px;height:0.75rem;margin:-1px 0.15rem 0;background:#aaa;vertical-align:middle !important}
+
+.pball{display:inline-block;width:32px;height:32px;background-color:#999;border:1px solid #666;border-radius:50%;color:#fff;font-family:apple sd gothic neo,nanum gothic,sans-serif;font-size:0.8rem;text-align:center;line-height:30px;vertical-align:middle;letter-spacing:-1px}
+.pball.red{background-color:#e02828;border-color:#b81818}
+.pball.blue{background-color:#2085cb;border-color:#1272a4}
+.pball.green{background-color:#6bb639;border-color:#539b23}
+.pball.white{background-color:#fff;border-color:#ccc;color:#000}
+.pball.purple{background-color:#983eda;border-color:#6c1ea6}
+.pball.yellow{background-color:#dab920;border-color:#af9620}
+.pball.small{width:28px;height:28px;font-size:0.75rem;line-height:26px}
+.pball.dice{padding-top:5px;line-height:11px;word-break:break-all}

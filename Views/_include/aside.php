@@ -52,7 +52,7 @@
 						<!-- } END: login-link -->
 
 						<!-- } END: ms-chat -->
-						<div class="ms-chat">
+						<div class="ms-chat mt-2">
 							<ul class="d-flex tab-nav">
 							<li class="on"><p>게임</p><span class="num">0</span></li>
 							<li><p>스포츠</p><span class="num">0</span></li>
@@ -70,14 +70,46 @@
 						</div>
 						<!-- } END: ms-chat -->
 
-						<div class="result-box">
+						<div class="result-box mt-2">
 							<div class="head">
 								최근 결과
-								<div class="rtxt">동행복권</div>
+								<div class="txt">동행복권</div>
 							</div>
 
 							<div class="body">
-								<div class="r1" id="latest_result"></div>
+								<div class="body-box" id="latest_result">
+									<ul>
+									<li>
+										<div class="title"><p>파워볼</p><span>(<strong class="text-primary">222</strong> 회차)</span></div>
+										<div class="float-end">
+											<span class="pball small blue">홀</span>
+											<span class="pball small red">오버</span>
+											<span class="pball small blue">중</span>
+											<span class="pball small red">짝</span>
+											<span class="pball small red">오버</span>
+										</div>
+									</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="result-box mt-2">
+							<div class="head">
+								랭킹
+							</div>
+
+							<div class="body">
+								<div class="body-box" id="latest_result">
+									<ul>
+									<li>
+										<div class="id">아이디</div>
+										<div class="float-end text-danger">
+											<span>55,550</span>
+										</div>
+									</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>

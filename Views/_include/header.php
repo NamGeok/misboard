@@ -33,15 +33,6 @@
 									<div class="d-flex justify-content-between">
 										<div class="flex-grow-1">
 											<ul class="clearfix m-0">
-											<li class="float-start on">
-												<a class="d-block" href="javascript:void(0)" target="_self">
-													<span class="me-a text-nowrap f-md en px-4 px-lg-5">
-														<i class="fa empty" aria-hidden="true"></i>
-														공지
-													</span>
-												</a>
-												<div class="arr"></div>
-											</li>
 											<li class="float-start">
 												<a class="d-block" href="javascript:void(0)" target="_self">
 													<span class="me-a text-nowrap f-md en px-4 px-lg-5">
@@ -74,6 +65,15 @@
 													<span class="me-a text-nowrap f-md en px-4 px-lg-5">
 														<i class="fa empty" aria-hidden="true"></i>
 														블랙
+													</span>
+												</a>
+												<div class="arr"></div>
+											</li>
+											<li class="float-start on">
+												<a class="d-block" href="javascript:void(0)" target="_self">
+													<span class="me-a text-nowrap f-md en px-4 px-lg-5">
+														<i class="fa empty" aria-hidden="true"></i>
+														소통
 													</span>
 												</a>
 												<div class="arr"></div>

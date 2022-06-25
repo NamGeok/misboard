@@ -4,7 +4,7 @@
 /********************************************************
  * Theme Common
  ********************************************************/
-body{margin:0;padding:0;background:#f2f3f6;font-size:1rem;color:#000}
+body{margin:0;padding:0;background:#f2f3f6;font-size:1rem;font-family:'Noto Sans KR',Arial,sans-serif;color:#000}
 body.responsive{overflow-x:hidden}
 h1,h2,h3,h4,h5,h6,en{font-family:"Roboto",sans-serif}
 
@@ -86,8 +86,8 @@ h1,h2,h3,h4,h5,h6,en{font-family:"Roboto",sans-serif}
 .ms-asid .login-btn button:hover {background-color:#127ccb;}
 .ms-asid .login-link{padding:1rem 1.5rem;background-color:#f5f5f5;text-align:center;font-size:0.75rem;line-height:1}
 .ms-asid .login-lin li{float:left;list-style:none}
-.ms-asid .ms-chat{overflow:hidden;position:relative;height:auto;min-height:150px;margin-top:10px;background-color:#fff}
-.ms-asid .ms-chat .tab-nav{display:flex;height:auto;background-color:#f5f5f5}
+.ms-asid .ms-chat{overflow:hidden;position:relative;height:auto;min-height:150px;background-color:#fff}
+.ms-asid .ms-chat .tab-nav{height:auto;background-color:#f5f5f5}
 .ms-asid .ms-chat .tab-nav li{flex:1;height:50px;padding-top:8px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;border-left:1px solid #ccc;color:#000;font-size:12px;text-align:center;cursor:pointer}
 .ms-asid .ms-chat .tab-nav li:last-child{border-right:1px solid #ccc}
 .ms-asid .ms-chat .tab-nav li:hover{background-color:#fff}
@@ -103,7 +103,26 @@ h1,h2,h3,h4,h5,h6,en{font-family:"Roboto",sans-serif}
 .ms-asid .ms-chat .chat-input li:last-child{width:38px}
 .ms-asid .ms-chat input{display:block;width:100%;height:38px;border:0px;color:#000;font-size:0.8rem;outline:none;text-indent:10px}
 .ms-asid .ms-chat .chat-btn{display:inline-block;width:30px;height:30px;background-color:#e5e5e5;border-radius:50%;color:#fff;font-size:1rem;text-align:center;line-height:30px;cursor:pointer;}
-.ms-asid .result-box{overflow:hidden;position:relative;height:auto;min-height:150px;margin-top:10px;background-color:#fff;border:1px solid #ccc}
+.ms-asid .result-box{overflow:hidden;position:relative;height:auto;min-height:150px;background-color:#fff;border:1px solid #ccc}
+.ms-asid .result-box .head{overflow:hidden;position:relative;height:50px;padding:0px 15px;background-color:#f5f5f5;border-bottom:1px solid #ccc;color:#0c4269;font-size:1.1rem;font-weight:700;line-height:50px}
+.ms-asid .result-box .head .txt{position:absolute;height:30px;right:15px;top:10px;padding:0px 15px;background-color:#0c4269;border-radius:14px;color:#fff;font-size:13px;font-weight:400;line-height:30px}
+.ms-asid .result-box .body{overflow:hidden;position:relative;padding:0}
+.ms-asid .result-box .body .body-box li{overflow:hidden;position:relative;display:flex;height:50px;padding:0px 15px;color:#000;font-size:0.8em;align-items:center}
+.ms-asid .result-box .body .body-box .title{flex:1;height:auto;color:#000}
+.ms-asid .result-box .body .body-box .title span{color:#999}
+.ms-asid .result-box .body .body-box .id{flex:1;height:auto;color:#000}
+.ms-asid .result-box .body .body-box .id span{color:#999}
+.ms-asid .result-box .body > .body-box > ul > li:nth-child(2){height:auto}
+.ms-asid .result-box .body > .body-box > ul > li:nth-child(2) > span{display:inline-block;margin-left:3px;vertical-align:middle}
+.ms-asid .result-box .body > .body-box > ul > li:nth-child(2) > span:first-child{margin-left:0px}
+
+.ms-snb{position:relative;height:auto;background-color:#e5e5e5;align-items:center}
+.ms snb ul{height:auto}
+.ms-snb li{z-index:1;position:relative;flex:1;height:50px;border:1px solid #b3b3b3;border-left:0px;color:#333;font-size:0.75rem;text-align:center;line-height:50px;cursor:pointer}
+.ms-snb li:first-child{border-left:1px solid #b3b3b3}
+.ms-snb li:hover{background-color:#f5f5f5;color:#000}
+.ms-snb li.on{background-color:#127ccb;border-left:1px solid #0c4269;border-color:#0c4269;color:#fff;font-size:0.75rem}
+
 
 /********************************************************
  * Footer
