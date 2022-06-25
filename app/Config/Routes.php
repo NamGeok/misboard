@@ -42,7 +42,7 @@ $routes->get('/', 'Home::index');
  * Admin, Login
  * --------------------------------------------------------------------
  */
-$routes->get('admin','Login::admin');
+$routes->get('admin/(:segment)','Admin::index/$i');
 $routes->get('blackcat','Login::login');
 $routes->post('login','Login::credentials');
 $routes->get('logout','Login::logout');
