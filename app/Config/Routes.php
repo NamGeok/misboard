@@ -8,7 +8,7 @@ $routes = Services::routes();
 // Load the system's routing file first, so that the app and ENVIRONMENT
 // can override as needed.
 if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
-    require SYSTEMPATH . 'Config/Routes.php';
+	require SYSTEMPATH . 'Config/Routes.php';
 }
 
 /*
@@ -39,6 +39,26 @@ $routes->get('/', 'Home::index');
 
 /*
  * --------------------------------------------------------------------
+ * Admin, Login
+ * --------------------------------------------------------------------
+ */
+$routes->get('admin','Login::admin');
+$routes->get('blackcat','Login::login');
+$routes->post('login','Login::credentials');
+$routes->get('logout','Login::logout');
+
+/*
+ * --------------------------------------------------------------------
+ * Pages
+ * --------------------------------------------------------------------
+ */
+//$routes->post('contact','Sendmail::processform');
+//$routes->get('spam','Spam::spam');
+//$routes->get('noPage','Pages::nopage');
+//$routes->get('(:any)', 'Pages::showme/$1');
+
+/*
+ * --------------------------------------------------------------------
  * Additional Routing
  * --------------------------------------------------------------------
  *
@@ -51,5 +71,5 @@ $routes->get('/', 'Home::index');
  * needing to reload it.
  */
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
-    require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
+	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }
