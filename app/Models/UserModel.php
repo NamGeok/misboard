@@ -6,43 +6,53 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table = 'tbl_users';
-    // .. other member variables
-    private $db;
-	protected $returnType = 'App\Entities\User';
-	protected $allowedFields = ['name', 'email', 'phone_no'];
+	protected $DBGroup              = 'default';
+	protected $table                = 'MEMBER';
+	protected $primaryKey           = 'mb_seq';
+	protected $useAutoIncrement     = true;
+	protected $insertID             = 0;
+	protected $returnType           = 'array';
+	protected $useSoftDelete        = false;
+	protected $protectFields        = true;
+	protected $allowedFields        = [
+		'mb_id',
+		'mb_password',
+		'mb_name',
+		'mb_nick',
+		'mb_email',
+		'mb_homepage',
+		'mb_grade',
+		'mb_level',
+		'mb_point',
+		'mb_exp',
+		'mb_tel',
+		'mb_hp',
+		'mb_login_ip',
+		'mb_date_ip',
+		'mb_lasttime'
+	];
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->db = \Config\Database::connect();
-        // OR $this->db = db_connect();
-    }
+	// Dates
+	protected $useTimestamps        = false;
+	protected $dateFormat           = 'datetime';
+	protected $createdField         = 'mb_created_at';
+	protected $updatedField         = 'mb_updated_at';
+	protected $deletedField         = 'mb_deleted_at';
 
-    public function insert_data($data = array())
-    {
-        $this->db->table($this->table)->insert($data);
-        return $this->db->insertID();
-    }
+	// Validation
+	protected $validationRules      = [];
+	protected $validationMessages   = [];
+	protected $skipValidation       = false;
+	protected $cleanValidationRules = true;
 
-    public function update_data($id, $data = array())
-    {
-        $this->db->table($this->table)->update($data, array(
-            "id" => $id,
-        ));
-        return $this->db->affectedRows();
-    }
-
-    public function delete_data($id)
-    {
-        return $this->db->table($this->table)->delete(array(
-            "id" => $id,
-        ));
-    }
-
-    public function get_all_data()
-    {
-        $query = $this->db->query('select * from ' . $this->table);
-        return $query->getResult();
-    }
+	// Callbacks
+	protected $allowCallbacks       = true;
+	protected $beforeInsert         = [];
+	protected $afterInsert          = [];
+	protected $beforeUpdate         = [];
+	protected $afterUpdate          = [];
+	protected $beforeFind           = [];
+	protected $afterFind            = [];
+	protected $beforeDelete         = [];
+	protected $afterDelete          = [];
 }

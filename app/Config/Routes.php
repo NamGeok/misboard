@@ -39,13 +39,26 @@ $routes->get('/', 'Home::index');
 
 /*
  * --------------------------------------------------------------------
- * Admin, Login
+ * Login
  * --------------------------------------------------------------------
  */
-$routes->get('admin/(:segment)','Admin::index/$i');
-$routes->get('blackcat','Login::login');
-$routes->post('login','Login::credentials');
-$routes->get('logout','Login::logout');
+$routes->match(['get', 'post'], 'login', 'UserController::login', ['filter' => 'noauth']);
+$routes->get('logout', 'UserController::logout');
+
+/*
+ * --------------------------------------------------------------------
+ * Admin
+ * --------------------------------------------------------------------
+ */
+$routes->group('admin', ['filter' => 'auth'], function ($routes) {
+	$routes->get('/', 'Admin\Admin::index');
+
+	$routes->group('users', ['filter' => 'auth'], function ($routes) {
+		$routes->get('/', 'Admin\Users::index');
+		$routes->get('list', 'Admin\Users::list');
+    });
+	$routes->get('config', 'Admin\Config::index');
+});
 
 /*
  * --------------------------------------------------------------------

@@ -14,7 +14,7 @@
 					</li>
 					</ul>
 					<ul class="float-end">
-					<li><a href="javascript:void(0)"><i class="fa fa-key"></i> 로그인</a></li>
+					<li><a href="<?php echo site_url('login') ?>"><i class="fa fa-key"></i> 로그인</a></li>
 					<li><a href="javascript:void(0)"><i class="fa fa-user-plus"></i> 회원가입</a></li>
 					</ul>
 				</div>
